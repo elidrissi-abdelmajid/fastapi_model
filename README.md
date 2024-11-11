@@ -14,20 +14,15 @@ Follow these steps to run the Iris classification model with FastAPI in a Docker
 
 ### 1. Clone the Repository
 
-Clone this repository to your local machine:
 
-```bash
-git clone https://github.com/your-username/iris-model-fastapi.git
-cd iris-model-fastapi
+    git clone https://github.com/your-username/iris-model-fastapi.git
+    cd iris-model-fastapi
 2. Install Dependencies
-You can install the required dependencies by creating a virtual environment (optional) and installing from requirements.txt:
 
-bash
-Copier le code
 # Create virtual environment (optional)
-python3 -m venv venv
-source venv/bin/activate  # For Linux/MacOS
-venv\Scripts\activate     # For Windows
+    python3 -m venv venv
+    source venv/bin/activate  # For Linux/MacOS
+    venv\Scripts\activate     # For Windows
 
 # Install dependencies
 pip install -r requirements.txt
