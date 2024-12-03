@@ -9,7 +9,7 @@ pipeline {
      stages {
             stage('Clone Repository') {
                 steps {
-                    git branch: 'main', url: 'https://github.com/elidrissi-abdelmajid/fastapi_model.git'
+                    git branch: 'master', url: 'https://github.com/elidrissi-abdelmajid/fastapi_model.git'
                 }
             }
             stage('Build Docker Image') {
