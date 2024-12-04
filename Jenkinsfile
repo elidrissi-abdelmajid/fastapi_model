@@ -15,10 +15,20 @@ pipeline {
             stage('Build Docker Image') {
                 steps {
                     script {
-                        docker.build('fastapi_model_image:latest')
+                        docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
                     }
                 }
             }
+            stage('Push Docker Image') {
+                steps {
+                    script {
+                        docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
+                            docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").push()
+                        }
+                    }
+                }
+            }
+
         }
     
         post {
